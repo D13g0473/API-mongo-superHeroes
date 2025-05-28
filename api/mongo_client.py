@@ -1,4 +1,4 @@
 from pymongo import MongoClient
 
 
-mongo = MongoClient("localhost", 27017)
+mongo = MongoClient("mongo", 27017)
