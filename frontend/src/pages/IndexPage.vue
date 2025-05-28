@@ -3,10 +3,10 @@
 
     <q-card  v-for="(hero,index) in heroes" v-bind:key="index" class="my-card q-card--bordered">
         <q-img
-        :src="getImage(hero.name)"
-        style="height: 200px; object-fit:contain; object-position: top; "
-        ratio="1.5"
-      />
+          :src="getImage(hero.name)"
+          style="height: 200px; object-fit: contain; background-color: #f0f0f0;"
+          ratio="1.5"
+        />
         <q-card-section>
           <div class="row">
             <div class="col-12 text-h6">{{hero.name}}</div>
