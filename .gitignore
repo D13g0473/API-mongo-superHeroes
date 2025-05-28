@@ -1,0 +1,22 @@
+# .gitignore
+
+# Node.js
+node_modules/
+dist/
+.env
+
+# Python
+api/__pycache__/
+api/venv/
+api/*.pyc
+*.sqlite3
+
+# Quasar build
+frontend/dist/
+frontend/.quasar/
+frontend/node_modules/
+frontend/.env
+
+# Others
+.DS_Store
+*.log

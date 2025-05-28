@@ -1,0 +1,29 @@
+version: "3.9"
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+
+  api:
+    build: ./api
+    volumes:
+      - ./api/api.py:/app/api.py
+    container_name: api
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    environment:
+      - MONGO_HOST=mongo
+
+  front:
+    build: ./frontend
+    container_name: frontend
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "9000:9000"
+    depends_on:
+      - api
